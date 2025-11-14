@@ -8,5 +8,5 @@ Inside the Structure: Building Data Systems from Scratch in Java
 
 
 
-GDrive Video Link -
+GDrive Video Link - 
 Short Paper - https://docs.google.com/document/d/1z8URPlCQXVRh5laVrrxkN1NA35liJ6BS6mZ6XsCdQS8/edit?usp=sharing
