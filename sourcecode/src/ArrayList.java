@@ -5,7 +5,7 @@ public class ArrayList<T extends Comparable<T>> {
 
     @SuppressWarnings("unchecked")
     public ArrayList() {
-        this.data = new Comparable[INITIAL_CAPACITY];
+        this.data = (T[]) new Comparable[INITIAL_CAPACITY];
         this.size = 0;
     }
 
@@ -130,7 +130,7 @@ public class ArrayList<T extends Comparable<T>> {
     // Resize internal array
     @SuppressWarnings("unchecked")
     private void resize() {
-        T[] newData = new Comparable[data.length * 2];
+        T[] newData = (T[]) new Comparable[data.length * 2];
         System.arraycopy(data, 0, newData, 0, size);
         data = newData;
     }
