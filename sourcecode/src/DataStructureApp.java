@@ -36,7 +36,7 @@ public class DataStructureApp {
     }
 
     private static void displayMainMenu() {
-        System.out.println("\n========== DATA STRUCTURES MENU ==========");
+        System.out.println("\n========= DATA STRUCTURES MENU =========");
         System.out.println("1. ArrayList");
         System.out.println("2. LinkedList");
         System.out.println("3. Stack");
