@@ -17,8 +17,7 @@ public class LinkedList<T extends Comparable<T>> {
         this.size = 0;
     }
 
-    // Add element at the end
-    public void add(T element) {
+    public void addAtEnd(T element) {
         if (head == null) {
             head = new Node<>(element);
         } else {
@@ -31,8 +30,7 @@ public class LinkedList<T extends Comparable<T>> {
         size++;
     }
 
-    // Add element at specific index
-    public void add(int index, T element) {
+    public void addAtIndex(int index, T element) {
         if (index < 0 || index > size) {
             throw new IndexOutOfBoundsException("Invalid index");
         }
@@ -50,6 +48,10 @@ public class LinkedList<T extends Comparable<T>> {
             current.next = newNode;
         }
         size++;
+    }
+
+    public void addAtStart(T element) {
+        addAtIndex(0, element);
     }
 
     // Remove element at index
