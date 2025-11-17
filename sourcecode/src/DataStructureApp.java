@@ -36,7 +36,7 @@ public class DataStructureApp {
     }
 
     private static void displayMainMenu() {
-        System.out.println("\n========= DATA STRUCTURES MENU =========");
+        System.out.println("\n========== DATA STRUCTURES MENU ==========");
         System.out.println("1. ArrayList");
         System.out.println("2. LinkedList");
         System.out.println("3. Stack");
@@ -54,8 +54,31 @@ public class DataStructureApp {
             int choice = getIntInput();
             switch (choice) {
                 case 1:
+                    System.out.println("\n--- Add Options ---");
+                    System.out.println("1. Add at End");
+                    System.out.println("2. Add at Start");
+                    System.out.println("3. Add at Specific Index");
+                    System.out.print("Choose: ");
+                    int addChoice = getIntInput();
                     System.out.print("Enter value to add: ");
-                    list.add(getIntInput());
+                    int value = getIntInput();
+                    if (addChoice == 1) {
+                        list.addAtEnd(value);
+                    } else if (addChoice == 2) {
+                        list.addAtStart(value);
+                    } else if (addChoice == 3) {
+                        System.out.print("Enter index: ");
+                        int idx = getIntInput();
+                        try {
+                            list.addAtIndex(idx, value);
+                        } catch (IndexOutOfBoundsException e) {
+                            System.out.println("Invalid index!");
+                            break;
+                        }
+                    } else {
+                        System.out.println("Invalid choice!");
+                        break;
+                    }
                     System.out.println("Added successfully!");
                     break;
                 case 2:
@@ -96,7 +119,7 @@ public class DataStructureApp {
 
     private static void displayArrayListMenu() {
         System.out.println("\n--- ArrayList Operations ---");
-        System.out.println("1. Add");
+        System.out.println("1. Add (End/Start/Index)");
         System.out.println("2. Remove by Index");
         System.out.println("3. Search");
         System.out.println("4. Sort");
@@ -113,8 +136,31 @@ public class DataStructureApp {
             int choice = getIntInput();
             switch (choice) {
                 case 1:
+                    System.out.println("\n--- Add Options ---");
+                    System.out.println("1. Add at End");
+                    System.out.println("2. Add at Start");
+                    System.out.println("3. Add at Specific Index");
+                    System.out.print("Choose: ");
+                    int addChoice = getIntInput();
                     System.out.print("Enter value to add: ");
-                    list.add(getIntInput());
+                    int value = getIntInput();
+                    if (addChoice == 1) {
+                        list.addAtEnd(value);
+                    } else if (addChoice == 2) {
+                        list.addAtStart(value);
+                    } else if (addChoice == 3) {
+                        System.out.print("Enter index: ");
+                        int idx = getIntInput();
+                        try {
+                            list.addAtIndex(idx, value);
+                        } catch (IndexOutOfBoundsException e) {
+                            System.out.println("Invalid index!");
+                            break;
+                        }
+                    } else {
+                        System.out.println("Invalid choice!");
+                        break;
+                    }
                     System.out.println("Added successfully!");
                     break;
                 case 2:
@@ -155,7 +201,7 @@ public class DataStructureApp {
 
     private static void displayLinkedListMenu() {
         System.out.println("\n--- LinkedList Operations ---");
-        System.out.println("1. Add");
+        System.out.println("1. Add (End/Start/Index)");
         System.out.println("2. Remove by Index");
         System.out.println("3. Search");
         System.out.println("4. Sort");
@@ -352,5 +398,150 @@ public class DataStructureApp {
             System.out.print("Try again: ");
             return getIntInput();
         }
+    }
+}
+
+class ArrayList<T> {
+    // addAtEnd, addAtStart, and addAtIndex methods
+    public void addAtEnd(T value) {
+      
+    }
+
+    public void addAtStart(T value) {
+    
+    }
+
+    public void addAtIndex(int index, T value) throws IndexOutOfBoundsException {
+       
+    }
+
+    public void remove(int index) throws IndexOutOfBoundsException {
+        // Remove value at the specified index
+    }
+
+    public int search(T value) {
+       
+        return -1; 
+    }
+
+    public void sort() {
+      
+    }
+
+    public void traverse() {
+       
+    }
+}
+
+class LinkedList<T> {
+    //LinkedList with addAtEnd, addAtStart, and addAtIndex methods
+    public void addAtEnd(T value) {
+        // Add value at the end of the list
+    }
+
+    public void addAtStart(T value) {
+        // Add value at the start of the list
+    }
+
+    public void addAtIndex(int index, T value) throws IndexOutOfBoundsException {
+        // Add value at the specified index
+    }
+
+    public void remove(int index) throws IndexOutOfBoundsException {
+        // Remove value at the specified index
+    }
+
+    public int search(T value) {
+        // Search for value in the list
+        return -1; // Placeholder return value
+    }
+
+    public void sort() {
+        // Sort the list
+    }
+
+    public void traverse() {
+        // Traverse and print the list
+    }
+}
+
+class Stack<T> {
+   
+    public void push(T value) {
+        // Push value onto the stack
+    }
+
+    public T pop() throws IllegalStateException {
+        // Pop value from the stack
+        return null; 
+    }
+
+    public T peek() throws IllegalStateException {
+        // Peek at the top value of the stack
+        return null; 
+    }
+
+    public int search(T value) {
+        // Search for value in the stack
+        return -1;
+    }
+
+    public void traverse() {
+        // Traverse and print the stack
+    }
+}
+
+class Queue<T> {
+    // Implementation of Queue with enqueue, dequeue, peek, and search methods
+    public void enqueue(T value) {
+      
+    }
+
+    public T dequeue() throws IllegalStateException {
+        // Dequeue value from the queue
+        return null; 
+    }
+
+    public T peek() throws IllegalStateException {
+        // Peek at the front value of the queue
+        return null;
+    }
+
+    public int search(T value) {
+        // Search for value in the queue
+        return -1; 
+    }
+
+    public void traverse() {
+        // Traverse and print the queue
+    }
+}
+
+class BinarySearchTree<T> {
+    //add, remove, search, inOrder, preOrder, and postOrder methods
+    public void add(T value) {
+        // Add value to the BST
+    }
+
+    public boolean remove(T value) {
+        // Remove value from the BST
+        return false; 
+    }
+
+    public boolean search(T value) {
+        // Search for value in the BST
+        return false; 
+    }
+
+    public void inOrder() {
+   
+    }
+
+    public void preOrder() {
+     
+    }
+
+    public void postOrder() {
+      
     }
 }
