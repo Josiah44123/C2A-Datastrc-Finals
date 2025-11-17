@@ -5,20 +5,27 @@ public class ArrayList<T extends Comparable<T>> {
 
     @SuppressWarnings("unchecked")
     public ArrayList() {
-        this.data = (T[]) new Comparable[INITIAL_CAPACITY];
+        this.data = (T[]) new Object[INITIAL_CAPACITY];
         this.size = 0;
     }
 
-    // Add element at the end
-    public void add(T element) {
+    public void addAtEnd(T element) {
         if (size == data.length) {
             resize();
         }
         data[size++] = element;
     }
 
-    // Add element at specific index
-    public void add(int index, T element) {
+    public void addAtStart(T element) {
+        if (size == data.length) {
+            resize();
+        }
+        System.arraycopy(data, 0, data, 1, size);
+        data[0] = element;
+        size++;
+    }
+
+    public void addAtIndex(int index, T element) {
         if (index < 0 || index > size) {
             throw new IndexOutOfBoundsException("Invalid index");
         }
@@ -130,7 +137,7 @@ public class ArrayList<T extends Comparable<T>> {
     // Resize internal array
     @SuppressWarnings("unchecked")
     private void resize() {
-        T[] newData = (T[]) new Comparable[data.length * 2];
+        T[] newData = (T[]) new Object[data.length * 2];
         System.arraycopy(data, 0, newData, 0, size);
         data = newData;
     }
