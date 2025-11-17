@@ -1,4 +1,4 @@
-public class ArrayList<T extends Comparable<T>> {
+public class ArrayList<T> {
     private T[] data;
     private int size;
     private static final int INITIAL_CAPACITY = 10;
@@ -94,11 +94,10 @@ public class ArrayList<T extends Comparable<T>> {
     }
 
     private int partition(int low, int high) {
-        @SuppressWarnings("unchecked")
-        T pivot = data[high];
+        Comparable pivot = (Comparable) data[high];
         int i = low - 1;
         for (int j = low; j < high; j++) {
-            if (data[j].compareTo(pivot) < 0) {
+            if (((Comparable) data[j]).compareTo(pivot) < 0) {
                 i++;
                 swap(i, j);
             }
