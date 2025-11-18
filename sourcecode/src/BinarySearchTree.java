@@ -67,11 +67,10 @@ public class BinarySearchTree<T extends Comparable<T>> {
             if (node.right == null) {
                 return node.left;
             }
-            // Node with two children
+            // Node with two children: find the in-order successor
             Node<T> minRight = findMin(node.right);
             node.data = minRight.data;
             node.right = removeRecursive(node.right, minRight.data);
-            size++;
         }
         return node;
     }
