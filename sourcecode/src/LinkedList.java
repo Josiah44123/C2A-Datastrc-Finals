@@ -156,16 +156,28 @@ public class LinkedList<T extends Comparable<T>> {
     }
 
     private Node<T> merge(Node<T> left, Node<T> right) {
-        if (left == null) return right;
-        if (right == null) return left;
+        Node<T> dummy = new Node<>(null);
+        Node<T> current = dummy;
 
-        if (left.data.compareTo(right.data) <= 0) {
-            left.next = merge(left.next, right);
-            return left;
-        } else {
-            right.next = merge(left, right.next);
-            return right;
+        while (left != null && right != null) {
+            if (left.data.compareTo(right.data) <= 0) {
+                current.next = left;
+                left = left.next;
+            } else {
+                current.next = right;
+                right = right.next;
+            }
+            current = current.next;
         }
+
+        // Attach remaining nodes
+        if (left != null) {
+            current.next = left;
+        } else {
+            current.next = right;
+        }
+
+        return dummy.next;
     }
 
     // Traverse
