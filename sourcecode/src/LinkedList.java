@@ -142,42 +142,39 @@ public class LinkedList<T extends Comparable<T>> {
         return merge(left, right);
     }
 
-    private Node<T> getMiddle(Node<T> node) {
-        if (node == null) return node;
+   private Node<T> getMiddle(Node<T> node) {
+    if (node == null)
+        return null;
 
-        Node<T> slow = node;
-        Node<T> fast = node;
+    Node<T> slow = node;
+    Node<T> fast = node.next; // FIX: fast starts at next
 
-        while (fast != null && fast.next != null) {
-            slow = slow.next;
-            fast = fast.next.next;
-        }
-        return slow;
+    while (fast != null && fast.next != null) {
+        slow = slow.next;
+        fast = fast.next.next;
     }
 
+    return slow; // slow is the true middle BEFORE the split
+}
+
+
     private Node<T> merge(Node<T> left, Node<T> right) {
-        Node<T> dummy = new Node<>(null);
-        Node<T> current = dummy;
+        // Handle base cases
+        if (left == null) return right;
+        if (right == null) return left;
 
-        while (left != null && right != null) {
-            if (left.data.compareTo(right.data) <= 0) {
-                current.next = left;
-                left = left.next;
-            } else {
-                current.next = right;
-                right = right.next;
-            }
-            current = current.next;
-        }
-
-        // Attach remaining nodes
-        if (left != null) {
-            current.next = left;
+        // Create result pointer - start with the smaller element
+        Node<T> result;
+        
+        if (left.data.compareTo(right.data) <= 0) {
+            result = left;
+            result.next = merge(left.next, right);
         } else {
-            current.next = right;
+            result = right;
+            result.next = merge(left, right.next);
         }
-
-        return dummy.next;
+        
+        return result;
     }
 
     // Traverse
