@@ -7,10 +7,9 @@
 
 ## Members
 
-1. **TANGHAL, BENEDICT** - Project lead, work distribution
-2. **LUBRICO, LORENZO** - Core components (ArrayList, LinkedList, Stack, Queue, BST)
-3. **VIVAS, FRANK ELY** - Menus and system integration
-4. **CHAVEZ, YUAN BENEDICT** - Testing and QA
+1. **ROSELL, JOSIAH LAMUEL** - Primary developer (all git commits)
+2. **GARCIA, ARIANNA NICOLE** - Team member
+3. **PECAYO, MIGUEL ALFONSO** - Team member
 
 ## Grading Breakdown
 
@@ -55,10 +54,10 @@
 
 **Score:** 20/20
 
-- **File:** Simple Bank System\_ Data Structure Project.pdf
-- 2 pages covering all 4 members
-- Each member describes task, challenge, achievement
-- Good overall learnings section on teamwork
+- **File:** paper.md (short paper)
+- Covers all 3 members: Rosell, Garcia, Pecayo
+- Describes implementation challenges and learnings
+- Good reflection on teamwork and debugging process
 
 ---
 
@@ -76,7 +75,7 @@
 
 ### Summary
 
-Solid banking system implementation with all 5 custom data structures integrated into a practical application. The BST is used well for account management, and the circular queue shows good understanding. However, many required functions are missing from the data structures (search, sort, add at index, display/traversal). The LinkedList is barely used. Good teamwork documentation in the paper.
+Solid banking system implementation with all 5 custom data structures integrated into a practical application. The BST is used well for account management, and the circular queue shows good understanding. However, many required functions are missing from the data structures (search, sort, add at index, display/traversal). The LinkedList is barely used. Good teamwork documentation in the paper. Members: Rosell, Garcia, Pecayo.
 
 ### Highlights
 

@@ -5,21 +5,15 @@
 
 ## Members
 
-1. **TANGHAL, BENEDICT**
-   - Email: benedict_tanghal@dlsl.edu.ph
-   - Role: Project lead, work distribution
+1. **ROSELL, JOSIAH LAMUEL**
+   - Email: josiah_lamuel_rosell@dlsl.edu.ph
+   - GitHub: Josiah44123
 
-2. **LUBRICO, LORENZO**
-   - Email: lorenzo_lubrico@dlsl.edu.ph
-   - Role: Core components (ArrayList, LinkedList, Stack, Queue, BST)
+2. **GARCIA, ARIANNA NICOLE**
+   - Email: arianna_nicole_garcia@dlsl.edu.ph
 
-3. **VIVAS, FRANK ELY**
-   - Email: frank_ely_vivas@dlsl.edu.ph
-   - Role: Menus and system integration
-
-4. **CHAVEZ, YUAN BENEDICT**
-   - Email: yuan_benedict_chavez@dlsl.edu.ph
-   - Role: Testing and QA
+3. **PECAYO, MIGUEL ALFONSO**
+   - Email: miguel_alfonso_pecayo@dlsl.edu.ph
 
 ---
-*Determined from project PDF documentation.*
+*Determined from project short paper (paper.md).*
